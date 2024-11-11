@@ -41,7 +41,7 @@ int main()
         {
             if(i == 1 && j == 1)continue;
             if(m[i][j] == 0)
-            f[i][j] = f[i - 1][j] + f[i][j - 1]; 
+            f[i][j] = f[i - 1][j] + f[i][j - 1];   //核心代码
         }
     }
     printf("%lld",f[bx][by]);
