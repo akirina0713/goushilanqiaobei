@@ -1,0 +1,25 @@
+题目描述
+求 n!
+挑战：尝试不使用循环语句（for、while）完成这个任务。
+输入格式
+第一行输入一个正整数 n。
+输出格式
+输出一个正整数，表示 n!。
+
+#include <iostream>
+using namespace std;
+long long a = 1;
+int n;
+void jiecheng(int x){
+	a *= x;
+	if(x == n) return;
+	jiecheng(x + 1);
+}
+
+int main(){
+
+	scanf("%d", &n);
+	jiecheng(1);
+	printf("%d", a);
+	return 0;
+}
